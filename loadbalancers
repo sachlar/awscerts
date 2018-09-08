@@ -1,0 +1,17 @@
+Application load balancers - Layer 7 of the OSI stack
+Network load balancers - Layer 4 of the OSI stack
+Classic load balancers - still covered but not recommended
+
+Use app load balancers for http & https traffic
+they are intelligent and application aware
+
+Network LB are best suited to TCP traffic - extreme performance
+
+Classic load balancers - legacy
+
+x-forwarded-for header
+
+exam TIPS
+3 types
+504 error gateway timed out, trouble shoot the application
+IPV4 ip address look at the x-forwarded-header
