@@ -1,0 +1,49 @@
+on demand / reserved / spot / dedicated hosts
+
+on demand - short term spiky workloads
+
+reserved - steady state predictable usage / up front payments
+
+spot - flexi start end times low pricing
+
+dedicated hosts - regulatory
+
+Instance types -
+  F - FGPA
+  I - IOPS
+  G - Graphics
+  H - High Disk
+  T - cheap General purpose (T2 micro)
+  D - Density
+  R - RAM
+  M - general purpose main choice
+  C - Compute
+  P - Pictures (Graphics)
+  X - Extreme Memory
+
+EBS - virtual disks Elastic Block Storage block devices
+placed into AZ's and replicated
+
+GP2 SSD 3 iops per gig up to 10,000 iops
+
+Provisioned iops io intensive db's and require more than 10,000 iops, 20,000 iops per volume
+
+Throughput optimised HDD (ST1) cant be boot volumes
+
+Cold HDD1 cant be boot volumes
+
+Magnetic low cost
+
+launch an Instance / new key pair / chmod 400 sachlarNEWKEYPAIR.pem
+ssh ec2-user@ ip -i sachlarNEWKEYPAIR
+sudo su
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+service httpd status
+
+cd /var/www/html
+create some simple html in a file called index.html using nano
+
+browse to the public ip

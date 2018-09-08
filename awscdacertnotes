@@ -1,0 +1,15 @@
+#whitepapers
+
+blue/green deployments on aws whitepaper 2016
+
+#domains
+
+there are 5 domains
+
+1. Deployment 22% ( CI/CD pipelines, elastic beanstalk, application deployment packages, serverless)
+2. Security 26% ( authenticated calls to aws services, encrypt aws services, application authentication & authorisation)
+3. Development with AWS services 30% ( write code for serverless apps, translate functional requirements into application code, implement application design into application code, write code to interact with aws services using api's sdk's & aws cli )
+4. Refactoring 10% ( optimise applications to use aws services and features )
+5. Monitoring and troubleshooting 12% ( write code that can be monitored, root cause analysis of faults found in testing or production)
+
+ 

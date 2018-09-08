@@ -1,0 +1,26 @@
+#IAM
+manage users and levels of access (USERS, GROUPS, ROLES (create role assign to resources), Policy (USER/GROUP/ROLE))
+central control
+share access
+granular
+Identity federation (AD, Facebook, LinkedIn)
+MFA
+Temporary access
+Password rotation policy PCI DSS compliant
+
+
+
+#IAM EXAM TIPS
+Policies written in JSON
+{"Version":"2010-10-17",
+ "Statement":
+ [
+  {"Effect":"Allow",
+   "Action":"*",
+   "Resource":"*"}
+ ]
+ }
+
+ IAM is Global
+ USERS have no permissions when created
+ Access Key & Secret Access Key used to access from CLI API
