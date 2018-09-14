@@ -1,0 +1,6 @@
+#exam TIPS
+dns services
+map domain names to EC2, Load Balancers, S3 Buckets
+NS, SOA, A records
+alias for the native domain (zone apex)
+sachlar.com ALIAS points to my S3 bucket but can point to ELB or EC2 instance
