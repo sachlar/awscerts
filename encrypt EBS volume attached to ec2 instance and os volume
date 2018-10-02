@@ -1,0 +1,27 @@
+ec2
+ebs create volume same az as the instance
+encrypt use the default key for now
+
+attach to ec2 instance
+
+login to instance
+
+lsblk - to view all volumes
+you will see the 100g new disk /dev/xvdf
+to check if it has any data on it or filesystem run this command
+file -s /dev/xvdf which if empty returns /dev/xvdf: data
+
+now to make a filesystem on the volume
+mkfs -t ext4 /dev/xvdf
+
+run this command again
+file -s /dev/xvdf
+this time it shows the type of filesystem on the volume as ext4
+
+now we need to mount the volume
+cd /
+mkdir filesystem
+mount /dev/xvdf /filesystem
+
+to unmount
+umount -d /dev/xvdf
