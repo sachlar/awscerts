@@ -1,0 +1,68 @@
+Create a dynamoDB table
+call it "posts"
+primary key of "id"
+
+create a new s3 storage bucket
+"sachlarmp3storagebucket"
+
+create iam role
+
+lambda role
+permissions create policy
+
+myLambdaPollyRole
+attach policy mylambdapollypolicy (used the policy JSON provided)
+
+add a bucket policy in permissions to digitaldisaster.co.uk bucket
+use the bucket policy JSON provided
+
+SNS
+create a Topic
+call it new_posts
+
+Create a new Lambda Function
+PostReader_NewPosts
+Python 2.7 Runtime
+Choose existing role
+myLambdaPollyRole
+copy the code provided into the function and save it.
+
+The function needs some environment variables...
+key value format
+DB_TABLE_NAME posts
+SNS_TOPIC arn:aws:sns:us-east-1:647705260064:new_posts
+
+Basic settings
+"This function inserts data into DynamoDB"
+
+Create another new Lambda function
+PostReader_ConvertToAudio
+Python 2.7 Runtime
+Choose existing role
+myLambdaPollyRole
+copy the code provided into the function and save it.
+
+The function needs some environment variables...
+key value format
+DB_TABLE_NAME posts
+BUCKET_NAME sachlarmp3storagebucket
+
+Basic settings
+"this function generates our mp3s and stores them in s3"
+ALSO set timeout to 5 minutes
+
+Create another new Lambda function
+PostReader_GetPosts
+Python 2.7 Runtime
+Choose existing role
+myLambdaPollyRole
+copy the code provided into the function and save it.
+
+The function needs some environment variables...
+key value format
+DB_TABLE_NAME posts
+
+Basic settings
+"this function gets info from dynamoDB"
+
+API Gateway

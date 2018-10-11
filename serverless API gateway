@@ -1,0 +1,21 @@
+API's
+Two types
+RESTful json
+
+SOAP xml
+
+api gateway managed service
+exposes https endpoints to define a RESTful api
+e.g. call an api from the command line
+curl "api.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22"
+
+define an api (container)
+define resources / nested resources (URL paths)
+
+for each resource select http methods(verbs)
+set Security
+choose target (ec2, lambda, dynamoDB)
+set request and response transformations
+Deploy api to a stage
+
+api caching / cache endpoint response....
